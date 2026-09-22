@@ -33,26 +33,21 @@ def norm_dataset(mu, sigma, N):
     return X, Y, class0, class1
 
 
-#решение самостоятельного задания вариант 10
 def nonlinear_dataset_10(N, seed=None):
 
     rng = np.random.default_rng(seed)
-    theta_min, theta_max = np.deg2rad(180), np.deg2rad(270) #угол в радианах где будут все точки
+    theta_min, theta_max = np.deg2rad(180), np.deg2rad(270)
   
-    #функция для рисования дуг
     def rounded_arc(cx, cy, r_min, r_max, n):
         r_mid, r_half = (r_min + r_max) / 2, (r_max - r_min) / 2
-        #разделение точек на три части (n_cap на закругленные части, а n_body на основную часть)
         n_cap = int(n * 0.12)
         n_body = n - 2 * n_cap
- 
-        #рисуем тело дуги
+
         theta = rng.uniform(theta_min, theta_max, n_body) 
         r = rng.uniform(r_min, r_max, n_body)
         x = cx - r * np.cos(theta)
         y = cy + r * np.sin(theta)
  
-        #рисуем точки внутри обычного круга
         for edge in (theta_min, theta_max):
             ex, ey = cx - r_mid * np.cos(edge), cy + r_mid * np.sin(edge)
             ang = rng.uniform(0, 2 * np.pi, n_cap)
