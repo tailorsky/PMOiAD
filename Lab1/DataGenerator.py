@@ -52,7 +52,7 @@ def nonlinear_dataset_10(N, seed=None):
         x = cx - r * np.cos(theta)
         y = cy + r * np.sin(theta)
  
-        #рисуем точки внутри обычного пятна
+        #рисуем точки внутри обычного круга
         for edge in (theta_min, theta_max):
             ex, ey = cx - r_mid * np.cos(edge), cy + r_mid * np.sin(edge)
             ang = rng.uniform(0, 2 * np.pi, n_cap)

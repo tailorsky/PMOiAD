@@ -1,5 +1,4 @@
 import DataGenerator as dg
-import numpy as np
 import matplotlib.pyplot as plt
 
 mu0 = [0, 2, 3]

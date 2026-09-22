@@ -50,7 +50,7 @@ for i in range(0, col):
 
 plt.scatter(class0[:, 0], class0[:, 2], marker=".", alpha=0.7, label='Класс 0')
 plt.scatter(class1[:, 0], class1[:, 2], marker=".", alpha=0.7, label='Класс 1')
-plt.title('Диаграмма рассеяния: признак 1 vs признак 3')
+plt.title('Скаттерограмма')
 plt.xlabel('Признак 1')
 plt.ylabel('Признак 3')
 plt.legend()
