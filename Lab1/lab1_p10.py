@@ -6,6 +6,11 @@ mu1 = [3, 5, 1]
 sigma0 = [2, 1, 2]
 sigma1 = [1, 2, 1]
 
+mu0 = [0, 2, 3]
+mu1 = [0, 3, 2]
+sigma0 = [2, 1, 2]
+sigma1 = [2, 2, 3]
+
 N = 1000
 mu = [mu0, mu1]
 sigma = [sigma0, sigma1]

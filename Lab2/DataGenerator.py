@@ -56,10 +56,10 @@ def nonlinear_dataset_10(N, noise=0.15, seed=None):
             y = np.concatenate([y, ey + rad * np.sin(ang)])
 
         pts = np.column_stack((x, y))
-        #pts += rng.normal(0, noise, pts.shape)
+        pts += rng.normal(0, noise, pts.shape)
         return pts
 
-    class0 = rounded_arc(cx=-1, cy=1, r_min=2.0, r_max=2.8, n=N)
+    class0 = rounded_arc(cx=-0.5, cy=0.5, r_min=2.0, r_max=2.8, n=N)
     class1 = rounded_arc(cx=0, cy=0, r_min=2.0, r_max=2.8, n=N)
 
     X = np.vstack((class0, class1))
