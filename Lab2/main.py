@@ -1,6 +1,9 @@
 import numpy as np
 from sklearn.linear_model import LogisticRegression
 
+from sklearn.metrics import RocCurveDisplay
+import matplotlib.pyplot as plt
+
 import DataGenerator as dg
 import model
 
